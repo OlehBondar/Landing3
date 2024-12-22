@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Arial, sans-serif";
   color: #ffffff;
@@ -16,6 +17,7 @@ body {
 .header {
   background-color: #181818;
   padding: 16px 0;
+  position: relative;
 }
 .header__container {
   display: -webkit-box;
@@ -29,25 +31,100 @@ body {
           align-items: center;
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .header__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 576px) {
+  .header__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+}
 .header__logo {
   margin-right: auto;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
 }
+@media (max-width: 576px) {
+  .header__logo {
+    display: none;
+  }
+}
+.header__burger {
+  display: none;
+  cursor: pointer;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+.header__burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media (max-width: 576px) {
+  .header__burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 .header__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  margin-right: 20px;
+}
+@media (max-width: 576px) {
+  .header__menu {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(24, 24, 24, 0.8);
+    padding: 20px;
+    gap: 15px;
+    z-index: 10;
+    -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  .header__menu--active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .header__item {
   list-style: none;
+  text-align: center;
 }
 .header__link {
   text-decoration: none;
-  color: #ffffff !important;
+  color: #ffffff;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
@@ -88,17 +165,47 @@ body {
 }
 .hero__container {
   text-align: center;
-  padding: 200px 0 50px;
+  padding: 150px 0 30px;
+}
+@media (max-width: 768px) {
+  .hero__container {
+    padding: 120px 0 20px;
+  }
+}
+@media (max-width: 576px) {
+  .hero__container {
+    padding: 100px 0 15px;
+  }
 }
 .hero__subtitle {
   font-size: 18px;
   text-transform: uppercase;
   opacity: 0.7;
 }
+@media (max-width: 768px) {
+  .hero__subtitle {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .hero__subtitle {
+    font-size: 14px;
+  }
+}
 .hero__title {
   font-size: 48px;
   font-weight: bold;
   margin: 10px 0;
+}
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 576px) {
+  .hero__title {
+    font-size: 28px;
+  }
 }
 .hero__description {
   font-size: 16px;
@@ -107,16 +214,59 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+@media (max-width: 768px) {
+  .hero__description {
+    font-size: 14px;
+    max-width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  .hero__description {
+    font-size: 12px;
+    max-width: 90%;
+  }
+}
 .hero__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   gap: 16px;
+  padding-right: 16px;
+  max-width: 100%; /* Обмежує ширину контейнера */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; /* Дозволяє перенос елементів, якщо вони не поміщаються */
+}
+@media (max-width: 768px) {
+  .hero__info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (max-width: 576px) {
+  .hero__info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 10px;
+  }
 }
 .hero__info-item {
   font-size: 14px;
   opacity: 0.7;
+}
+@media (max-width: 768px) {
+  .hero__info-item {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .hero__info-item {
+    font-size: 10px;
+  }
 }

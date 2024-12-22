@@ -19,23 +19,44 @@
   
     &__container {
       text-align: center;
-      padding: 200px 0 50px;
-     
+      padding: 150px 0 30px;
       
+  
+      @media (max-width: 768px) {
+        padding: 120px 0 20px;
+      }
+  
+      @media (max-width: 576px) {
+        padding: 100px 0 15px;
+      }
     }
   
     &__subtitle {
       font-size: 18px;
       text-transform: uppercase;
       opacity: 0.7;
-      
-      
+  
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+  
+      @media (max-width: 576px) {
+        font-size: 14px;
+      }
     }
   
     &__title {
       font-size: 48px;
       font-weight: bold;
       margin: 10px 0;
+  
+      @media (max-width: 768px) {
+        font-size: 36px;
+      }
+  
+      @media (max-width: 576px) {
+        font-size: 28px;
+      }
     }
   
     &__description {
@@ -44,18 +65,49 @@
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+  
+      @media (max-width: 768px) {
+        font-size: 14px;
+        max-width: 80%;
+      }
+  
+      @media (max-width: 576px) {
+        font-size: 12px;
+        max-width: 90%;
+      }
     }
   
     &__info {
       display: flex;
-      justify-content: right;
+      justify-content: flex-end;
       gap: $spacing;
-      
+      padding-right: $spacing;
+      max-width: 100%; /* Обмежує ширину контейнера */
+      flex-wrap: wrap; /* Дозволяє перенос елементів, якщо вони не поміщаються */
+  
+      @media (max-width: 768px) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+  
+      @media (max-width: 576px) {
+        justify-content: center;
+        gap: 10px;
+      }
   
       &-item {
         font-size: 14px;
         opacity: 0.7;
+  
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+  
+        @media (max-width: 576px) {
+          font-size: 10px;
+        }
       }
     }
   }
+  
   

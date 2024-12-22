@@ -1,12 +1,24 @@
 .header {
     background-color: #181818;
     padding: $spacing 0;
+    position: relative; // Щоб меню залишалося в межах header
   
     &__container {
       display: flex;
       justify-content: flex-start;
       align-items: center;
       gap: 20px;
+  
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+      }
+  
+      @media (max-width: 576px) {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   
     &__logo {
@@ -14,32 +26,71 @@
       font-size: 24px;
       font-weight: bold;
       text-transform: uppercase;
+  
+      @media (max-width: 576px) {
+        display: none; // Ховаємо логотип на мобільних
+      }
+    }
+  
+    &__burger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+  
+      span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: $primary-color;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+  
+      @media (max-width: 576px) {
+        display: flex; // Відображаємо бургер-меню на мобільних
+      }
     }
   
     &__menu {
       display: flex;
       gap: 30px;
-      margin-right: 20px;
-    }  
   
-      &__item {
-        list-style: none;
-      }
+      @media (max-width: 576px) {
+        display: none; // Ховаємо меню за замовчуванням
+        flex-direction: column;
+        position: absolute; // Відносно header
+        top: 100%; // Починаємо одразу під контейнером
+        left: 0;
+        right: 0;
+        background-color: rgba(24, 24, 24, 0.8);
+        padding: 20px;
+        gap: 15px;
+        z-index: 10; // Задаємо пріоритет для коректного відображення
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); // Додаємо тінь для відокремлення
   
-      &__link {
-        text-decoration: none;
-        color: $primary-color !important;
-        transition: color 0.3s;
-        
-  
-        &:hover {
-          color: $accent-color;
+        &--active {
+          display: flex;
         }
-      
+      }
+    }
+  
+    &__item {
+      list-style: none;
+      text-align: center;
+    }
+  
+    &__link {
+      text-decoration: none;
+      color: $primary-color;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: $accent-color;
+      }
     }
   
     &__button {
-        
       padding: calc(#{$spacing} / 2) $spacing;
       background-color: $accent-color;
       color: $secondary-color;
@@ -52,5 +103,7 @@
         background-color: darken($accent-color, 10%);
       }
     }
-}
+  }
+  
+  
   
