@@ -1,0 +1,122 @@
+body {
+  font-family: "Arial, sans-serif";
+  color: #ffffff;
+  background-color: #000000;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header {
+  background-color: #181818;
+  padding: 16px 0;
+}
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.header__logo {
+  margin-right: auto;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  margin-right: 20px;
+}
+.header__item {
+  list-style: none;
+}
+.header__link {
+  text-decoration: none;
+  color: #ffffff !important;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.header__link:hover {
+  color: #ffffff;
+}
+.header__button {
+  padding: calc(16px / 2) 16px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.header__button:hover {
+  background-color: #e6e6e6;
+}
+
+.hero {
+  position: relative;
+  color: #ffffff;
+}
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.hero__background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero__container {
+  text-align: center;
+  padding: 200px 0 50px;
+}
+.hero__subtitle {
+  font-size: 18px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.hero__title {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.hero__description {
+  font-size: 16px;
+  margin-bottom: 16px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  gap: 16px;
+}
+.hero__info-item {
+  font-size: 14px;
+  opacity: 0.7;
+}

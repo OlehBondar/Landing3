@@ -1,0 +1,17 @@
+
+  
+  body {
+    font-family: $font-family;
+    color: $primary-color;
+    background-color: $background-color;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 $spacing;
+  }
+  

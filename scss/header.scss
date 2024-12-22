@@ -1,0 +1,56 @@
+.header {
+    background-color: #181818;
+    padding: $spacing 0;
+  
+    &__container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    &__logo {
+      margin-right: auto;
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    &__menu {
+      display: flex;
+      gap: 30px;
+      margin-right: 20px;
+    }  
+  
+      &__item {
+        list-style: none;
+      }
+  
+      &__link {
+        text-decoration: none;
+        color: $primary-color !important;
+        transition: color 0.3s;
+        
+  
+        &:hover {
+          color: $accent-color;
+        }
+      
+    }
+  
+    &__button {
+        
+      padding: calc(#{$spacing} / 2) $spacing;
+      background-color: $accent-color;
+      color: $secondary-color;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: darken($accent-color, 10%);
+      }
+    }
+}
+  

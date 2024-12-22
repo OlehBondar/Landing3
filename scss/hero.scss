@@ -1,0 +1,61 @@
+.hero {
+    position: relative;
+    color: $primary-color;
+  
+    &__background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    &__container {
+      text-align: center;
+      padding: 200px 0 50px;
+     
+      
+    }
+  
+    &__subtitle {
+      font-size: 18px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      
+      
+    }
+  
+    &__title {
+      font-size: 48px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+  
+    &__description {
+      font-size: 16px;
+      margin-bottom: $spacing;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    &__info {
+      display: flex;
+      justify-content: right;
+      gap: $spacing;
+      
+  
+      &-item {
+        font-size: 14px;
+        opacity: 0.7;
+      }
+    }
+  }
+  
