@@ -15,3 +15,14 @@
     padding: 0 $spacing;
   }
   
+  .details {
+    display: flex;
+    gap: $spacing;
+    font-size: 14px;
+    opacity: 0.8;
+  
+    .detail {
+      display: inline-block;
+    }
+  }
+  

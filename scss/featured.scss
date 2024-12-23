@@ -40,21 +40,13 @@
       }
     }
   
-    &__details {
+    .details--featured {
       position: absolute;
       bottom: 10%;
       right: 5%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: $spacing;
-      font-size: 14px;
-      opacity: 0.8;
-  
-      &__detail {
-        display: inline-block;
-      }
     }
+    
+    
   
     // Адаптація для планшетів (макс. ширина 768px)
     @media (max-width: 768px) {

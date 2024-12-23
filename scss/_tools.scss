@@ -1,0 +1,194 @@
+.tools {
+  display: flex;
+  align-items: stretch;
+  margin-top: -10px;
+  height: 100vh;
+  
+
+ 
+
+  &__content {
+    flex: 1;
+    padding: $spacing * 7;
+    font-size: 16px;
+    margin-top: $spacing *4;
+    
+    
+  }
+    &__subtitle {
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-bottom: $spacing;
+      color: $description-color; // Сірий текст
+      font-weight: lighter;
+    }
+
+    &__title {
+      font-size: 36px;
+      font-weight: lighter;
+      margin-bottom: $spacing;
+    
+    }
+
+    &__description {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: $spacing * 2;
+    }
+
+    &__button {
+      padding: 10px 20px;
+      background-color: $accent-color;
+      color: $background-color;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 24px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($accent-color, 10%);
+
+      }
+    }
+  
+
+    &__image {
+      flex: 1;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      
+  
+      img {
+
+        width: 100%;
+        height: 100vh;
+        object-fit: cover; // Забезпечення масштабування зображення
+        
+      }
+    }
+
+    .details--tools {
+      position: absolute; /* Для розташування */
+      bottom: 5%; /* Відступ від нижнього краю */
+      right: 5%; /* Відступ від правого краю */
+      display: flex; /* Для горизонтального розташування елементів */
+      gap: $spacing; /* Проміжок між елементами */
+    
+      .details__item {
+        font-size: 14px; /* Розмір тексту */
+        opacity: 0.8; /* Прозорість тексту */
+      }
+    }  
+    
+
+    // Адаптація для екранів від 888px до 769px
+  @media (max-width: 888px) and (min-width: 769px) {
+    flex-direction: column; // Перемикання на вертикальний вигляд
+    height: auto;
+
+    &__content {
+      padding: $spacing * 4;
+      margin-top: $spacing * 2;
+      text-align: center;
+
+      &__title {
+        font-size: 28px;
+      }
+
+      &__description {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+
+      &__button {
+        font-size: 18px;
+        padding: 8px 16px;
+      }
+    }
+
+  
+
+    &__image {
+      height: auto;
+      img {
+        height: auto;
+        max-height: 50vh;
+      }
+    }
+   
+    
+    
+
+    
+  }
+
+    // Адаптація для планшетів (макс. ширина 768px)
+  @media (max-width: 768px) {
+    flex-direction: column; // Вертикальне розташування контенту
+    height: auto; // Дозволяємо змінювати висоту блоку
+
+    &__content {
+      padding: $spacing * 2;
+      margin-top: $spacing * 2;
+
+      &__title {
+        font-size: 28px; // Зменшуємо розмір заголовка
+      }
+
+      &__description {
+        font-size: 16px; // Зменшуємо розмір опису
+        line-height: 1.4;
+      }
+
+      &__button {
+        font-size: 18px; // Зменшуємо розмір кнопки
+      }
+    }
+
+    &__image {
+      height: 50vh; // Робимо зображення менш високим
+      img {
+        height: 100%; // Адаптуємо висоту
+      }
+    }
+  }
+
+  // Адаптація для мобільних (макс. ширина 576px)
+  @media (max-width: 576px) {
+    flex-direction: column; // Вертикальне розташування контенту
+    height: auto; // Дозволяємо змінювати висоту блоку
+
+    &__content {
+      padding: $spacing * 3;
+      margin-top: $spacing;
+    }
+
+      &__title {
+        font-size: 18px; // Ще більше зменшуємо заголовок
+      }
+
+      &__description {
+        font-size: 12px; // Ще більше зменшуємо текст опису
+        line-height: 1.3;
+      }
+
+      &__button {
+        font-size: 8px; // Ще більше зменшуємо кнопку
+        padding: 8px 16px;
+      }
+    
+
+    &__image {
+      height: 40vh; // Ще більше зменшуємо висоту зображення
+      img {
+        height: 100%; // Адаптуємо висоту
+      }
+    }
+  }
+}
+
+

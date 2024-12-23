@@ -83,13 +83,13 @@
       }
     }
   
-    &__info {
-      display: flex;
+    .details--hero {
       justify-content: flex-end;
-      gap: $spacing;
-      padding-right: $spacing;
-      max-width: 100%; /* Обмежує ширину контейнера */
-      flex-wrap: wrap; /* Дозволяє перенос елементів, якщо вони не поміщаються */
+      margin-top: $spacing;
+    }
+    
+    
+    
   
       @media (max-width: 768px) {
         justify-content: center;
@@ -113,7 +113,8 @@
           font-size: 10px;
         }
       }
-    }
   }
+
+  
   
   
