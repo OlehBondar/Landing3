@@ -1,0 +1,106 @@
+.specialties {
+    background-color: $background-color; // Основний фон
+    color: $primary-color; // Основний колір тексту
+    padding: calc(4 * $spacing) $spacing; // Відступи навколо блоку
+  
+    &__container {
+      max-width: $container-width;
+      margin: 0 auto;
+    }
+  
+    &__heading {
+      text-align: center;
+      margin-bottom: calc(2.5 * $spacing); // Відступ між заголовком і сіткою
+    }
+  
+    &__title {
+      font-size: 36px;
+      font-family: $font-family;
+      margin-bottom: $spacing;
+    }
+  
+    &__subtitle {
+      font-size: 18px;
+      font-family: $font-family;
+      opacity: 0.7;
+    }
+  
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); // Два стовпці
+      gap: calc(2 * $spacing); // Відстань між блоками
+    }
+  
+    &__item {
+      position: relative;
+      overflow: hidden;
+      border-radius: calc(0.5 * $spacing);
+  
+      &:hover .specialties__content {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  
+    &__image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  
+    &__content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6); // Напівпрозорий чорний фон
+      padding: calc(1.5 * $spacing);
+      transform: translateY(100%);
+      transition: all 0.3s ease;
+      opacity: 0;
+    }
+  
+    &__name {
+      font-size: 20px;
+      font-weight: bold;
+      font-family: $font-family;
+      margin-bottom: calc(0.5 * $spacing);
+
+      @media (max-width: 576px) {
+        font-size: 10px; // Розмір тексту для мобільних
+      }
+    }
+  
+    &__description {
+      font-size: 14px;
+      font-family: $font-family;
+      margin-bottom: calc(0.5 * $spacing);
+      color: $description-color;
+
+      @media (max-width: 576px) {
+        font-size: 6px; // Розмір тексту для мобільних
+      }
+    }
+  
+    &__button {
+      display: inline-block;
+      padding: calc(0.5 * $spacing) $spacing;
+      background-color: $accent-color;
+      color: $secondary-color;
+      text-decoration: none;
+      border-radius: calc(0.25 * $spacing);
+      font-weight: bold;
+      font-family: $font-family;
+      transition: background-color 0.3s ease;
+
+      @media (max-width: 576px) {
+        font-size: 8px; // Розмір тексту для мобільних
+      }
+  
+      &:hover {
+        background-color: darken($accent-color, 10%);
+      }
+    }
+  }
+  
+
