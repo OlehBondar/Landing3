@@ -47,7 +47,43 @@
       }
     
   
-    
+      .help-section {
+        background-color: $background-color; /* Чорний фон */
+        color: #fff; /* Білий текст */
+        text-align: center; /* Центрування тексту */
+        padding: 50px 20px; /* Відступи */
+      }
+      
+      .help-section__title {
+        font-size: 24px; /* Розмір заголовка */
+        font-weight: bold;
+        margin-bottom: 10px; /* Відступ під заголовком */
+      }
+      
+      .help-section__subtitle {
+        font-size: 16px; /* Розмір підзаголовка */
+        margin-bottom: 20px; /* Відступ під підзаголовком */
+        opacity: 0.8; /* Трохи прозорий текст */
+      }
+      
+      .help-section__button {
+        padding: 10px 20px; /* Відступи всередині кнопки */
+        background-color: $primary-color; /* Білий фон кнопки */
+        color: $secondary-color; /* Чорний текст кнопки */
+        border: 2px solid #000; /* Чорна обводка */
+        border-radius: 25px; /* Закруглені краї */
+        font-size: 14px; /* Розмір тексту в кнопці */
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      .help-section__button:hover {
+        background-color: $background-color; /* Зміна фону на чорний при наведенні */
+        color: $primary-color; /* Білий текст при наведенні */
+        border-color: $primary-color; /* Зміна обводки на білу */
+      }
+      
     
     
   

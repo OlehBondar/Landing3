@@ -834,6 +834,39 @@ body {
   color: #c0c0c0;
   line-height: 1.4; /* Поліпшення читабельності */
 }
+.nepal .help-section {
+  background-color: #000000; /* Чорний фон */
+  color: #fff; /* Білий текст */
+  text-align: center; /* Центрування тексту */
+  padding: 50px 20px; /* Відступи */
+}
+.nepal .help-section__title {
+  font-size: 24px; /* Розмір заголовка */
+  font-weight: bold;
+  margin-bottom: 10px; /* Відступ під заголовком */
+}
+.nepal .help-section__subtitle {
+  font-size: 16px; /* Розмір підзаголовка */
+  margin-bottom: 20px; /* Відступ під підзаголовком */
+  opacity: 0.8; /* Трохи прозорий текст */
+}
+.nepal .help-section__button {
+  padding: 10px 20px; /* Відступи всередині кнопки */
+  background-color: #ffffff; /* Білий фон кнопки */
+  color: #000000; /* Чорний текст кнопки */
+  border: 2px solid #000; /* Чорна обводка */
+  border-radius: 25px; /* Закруглені краї */
+  font-size: 14px; /* Розмір тексту в кнопці */
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.nepal .help-section__button:hover {
+  background-color: #000000; /* Зміна фону на чорний при наведенні */
+  color: #ffffff; /* Білий текст при наведенні */
+  border-color: #ffffff; /* Зміна обводки на білу */
+}
 @media (max-width: 768px) {
   .nepal__content {
     top: 40%; /* Зміщення тексту вище */
@@ -875,4 +908,136 @@ body {
     right: 2%;
     bottom: 5%;
   }
+}
+
+.footer {
+  background-color: #000; /* Чорний фон */
+  color: #fff; /* Білий текст */
+  padding: 40px 20px;
+  font-size: 14px;
+}
+.footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.footer__column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+.footer__logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.footer__description {
+  font-size: 14px;
+  opacity: 0.8;
+}
+.footer__title {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__item {
+  margin-bottom: 5px;
+}
+.footer__newsletter {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.footer__newsletter-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.footer__newsletter-text {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+.footer__newsletter-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+.footer__newsletter-form .footer__input {
+  padding: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 300px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  border-radius: 20px;
+  outline: none;
+}
+.footer__newsletter-form .footer__button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.footer__socials .footer__social {
+  width: 24px; /* Розмір іконки */
+  height: 24px;
+  background-size: cover; /* Масштабування фону */
+  background-repeat: no-repeat; /* Заборонити повторення */
+  display: inline-block; /* Забезпечення, щоб іконки були у рядку */
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; /* Анімація для наведення */
+}
+.footer__socials .footer__social--twitter {
+  background-image: url("../icon/x.png"); /* Шлях до іконки Twitter */
+}
+.footer__socials .footer__social--instagram {
+  background-image: url("../icon/inst.png"); /* Шлях до іконки Instagram */
+}
+.footer__socials .footer__social--facebook {
+  background-image: url("../icon/fb.png"); /* Шлях до іконки Facebook */
+}
+.footer__socials .footer__social:hover {
+  opacity: 0.7; /* Прозорість при наведенні */
 }
