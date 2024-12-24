@@ -24,5 +24,17 @@
     .detail {
       display: inline-block;
     }
-  }
+
+        @media (max-width: 768px) {
+         justify-content: center;
+         flex-wrap: wrap;
+       }
+
+        @media (max-width: 576px) {
+         justify-content: center;
+         gap: 10px;
+         font-size: 8px;
+       }
+   }  
+  
   

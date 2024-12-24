@@ -25,6 +25,24 @@ body {
 .details .detail {
   display: inline-block;
 }
+@media (max-width: 768px) {
+  .details {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (max-width: 576px) {
+  .details {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 10px;
+    font-size: 8px;
+  }
+}
 
 .header {
   background-color: #181818;
@@ -202,7 +220,7 @@ body {
 }
 @media (max-width: 576px) {
   .hero__subtitle {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .hero__title {
@@ -217,7 +235,7 @@ body {
 }
 @media (max-width: 576px) {
   .hero__title {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 .hero__description {
@@ -236,18 +254,17 @@ body {
 }
 @media (max-width: 576px) {
   .hero__description {
-    font-size: 12px;
+    font-size: 8px;
     max-width: 90%;
   }
 }
 .hero .details--hero {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-top: 16px;
+  position: absolute;
+  bottom: 0;
+  right: 5%;
 }
 @media (max-width: 768px) {
-  .hero {
+  .hero .details--hero {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -256,11 +273,12 @@ body {
   }
 }
 @media (max-width: 576px) {
-  .hero {
+  .hero .details--hero {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     gap: 10px;
+    font-size: 8px;
   }
 }
 .hero-item {
@@ -432,10 +450,10 @@ body {
             transform: translateY(-40%);
     max-width: 300px; /* Зменшення ширини тексту */
   }
-  .featured__content__title {
+  .featured__title {
     font-size: 28px; /* Зменшення розміру заголовка */
   }
-  .featured__content__description {
+  .featured__description {
     font-size: 16px; /* Зменшення розміру тексту */
   }
   .featured__details {
@@ -452,16 +470,15 @@ body {
     text-align: center;
     font-size: 12px;
   }
-  .featured__content__title {
+  .featured__title {
     font-size: 16px; /* Ще менший заголовок */
   }
-  .featured__content__description {
+  .featured__description {
     font-size: 10px;
     line-height: 1.3;
   }
   .featured__details {
-    font-size: 10px;
-    gap: 6px;
+    font-size: 8px;
     right: 2%;
     bottom: 5%;
   }
@@ -546,10 +563,14 @@ body {
   display: -ms-flexbox;
   display: flex; /* Для горизонтального розташування елементів */
   gap: 16px; /* Проміжок між елементами */
-}
-.tools .details--tools .details__item {
   font-size: 14px; /* Розмір тексту */
   opacity: 0.8; /* Прозорість тексту */
+  color: #c0c0c0;
+}
+@media (max-width: 576px) {
+  .tools .details--tools {
+    font-size: 8px;
+  }
 }
 @media (max-width: 888px) and (min-width: 769px) {
   .tools {
@@ -755,7 +776,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 30px;
+  gap: 100px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -767,4 +788,91 @@ body {
      object-fit: contain;
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1); /* Інвертування кольору для білого тексту */
+}
+
+.nepal {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.nepal__image {
+  width: 100vw; /* Зображення на всю ширину */
+  height: auto;
+  position: relative;
+}
+.nepal__image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover; /* Масштабування зображення */
+}
+.nepal__image .details--nepal {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
+.nepal__content {
+  position: absolute;
+  top: 50%; /* Вирівнювання тексту по вертикалі */
+  right: 5%; /* Відступ від правого краю */
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); /* Центрування тексту по вертикалі */
+  text-align: left;
+  max-width: 400px; /* Обмеження ширини тексту */
+  word-wrap: break-word; /* Перенос довгих слів */
+}
+.nepal__title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff !important;
+}
+.nepal__description {
+  font-size: 18px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  color: #c0c0c0;
+  line-height: 1.4; /* Поліпшення читабельності */
+}
+@media (max-width: 768px) {
+  .nepal__content {
+    top: 40%; /* Зміщення тексту вище */
+    right: 3%; /* Зменшення відступу */
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+    max-width: 300px; /* Зменшення ширини тексту */
+  }
+  .nepal__title {
+    font-size: 24px; /* Зменшення розміру заголовка */
+  }
+  .nepal__description {
+    font-size: 12px; /* Зменшення розміру тексту */
+  }
+}
+.nepal__details {
+  font-size: 12px;
+  right: 3%;
+  bottom: 5%;
+}
+@media (max-width: 576px) {
+  .nepal__content {
+    top: 30%; /* Ще більше зміщення тексту */
+    right: 2%; /* Зменшення відступу */
+    max-width: 250px; /* Ще менша ширина тексту */
+    text-align: center;
+    font-size: 14px;
+  }
+  .nepal__title {
+    font-size: 12px; /* Ще менший заголовок */
+  }
+  .nepal__description {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  .nepal__details {
+    font-size: 8px;
+    gap: 8px;
+    right: 2%;
+    bottom: 5%;
+  }
 }

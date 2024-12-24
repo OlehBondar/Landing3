@@ -77,11 +77,14 @@
       right: 5%; /* Відступ від правого краю */
       display: flex; /* Для горизонтального розташування елементів */
       gap: $spacing; /* Проміжок між елементами */
-    
-      .details__item {
-        font-size: 14px; /* Розмір тексту */
-        opacity: 0.8; /* Прозорість тексту */
+      font-size: 14px; /* Розмір тексту */
+      opacity: 0.8; /* Прозорість тексту */
+      color: $description-color;
+
+      @media (max-width: 576px) {
+        font-size: 8px;
       }
+      
     }  
     
 
@@ -187,6 +190,8 @@
       img {
         height: 100%; // Адаптуємо висоту
       }
+
+     
     }
   }
 }
