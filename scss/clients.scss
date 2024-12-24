@@ -1,0 +1,32 @@
+.clients-section {
+    background-color: $background-color; /* Чорний фон */
+    color: $primary-color;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .clients-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .clients-section p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: $description-color;
+  }
+  
+  .clients-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .clients-logos img {
+    max-width: 100px; /* Максимальна ширина логотипів */
+    max-height: 60px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Інвертування кольору для білого тексту */
+  }
+  
